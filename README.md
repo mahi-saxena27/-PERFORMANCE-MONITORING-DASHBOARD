@@ -1,15 +1,27 @@
-# -PERFORMANCE-MONITORING-DASHBOARD
-Company =CODTECH IT SOLUTIONS PVT.LTD
+﻿# Performance Monitoring Dashboard
 
-Name =MAHI SAXENA
+This dashboard tracks and displays performance metrics (URL, Status Code, Duration, Timestamp) for every request in the e-commerce app.
 
-Domain = .NET WEB DEVELOPMENT
+## Features
+- Logs every HTTP request.
+- Displays performance data in a dashboard view.
+- Helps identify slow or failing requests.
+- Local-only, no external services needed.
 
-Duration = 4 WEEkS
+---
 
-Intern Id CT04WR241
+## File Structure
+- Models/PerformanceLog.cs: Model for log entry.
+- Middleware/PerformanceLoggingMiddleware.cs: Middleware that writes logs.
+- Controllers/DashboardController.cs: Reads logs and sends to view.
+- Views/Dashboard/Index.cshtml: UI to display logs.
+- Logs/performance.txt: Storage for log entries.
 
-Mentor = NEELA SANTHOSH
+---
 
-It is a basic performance monitoring dashboard tracks and display performance metrics (Url,Status Code,Duration,Timestamp) 
-for every request in the E-Commerce App.
+## Setup Instructions
+
+### 1. Register Middleware
+In Program.cs:
+```csharp
+app.UseMiddleware<PerformanceLoggingMiddleware>();
