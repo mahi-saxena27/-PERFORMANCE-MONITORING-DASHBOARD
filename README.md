@@ -25,3 +25,4 @@ This dashboard tracks and displays performance metrics (URL, Status Code, Durati
 In Program.cs:
 ```csharp
 app.UseMiddleware<PerformanceLoggingMiddleware>();
+*output*= ![Image](https://github.com/user-attachments/assets/71fcbd38-a25e-499b-8de6-c310673c041d)
